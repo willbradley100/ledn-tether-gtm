@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Borrowing — Ledn Design Mockup</title>
+<link rel="stylesheet" href="design-system.css">
+<style>
+.steps-row { display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:48px; }
+.step { padding:32px 24px 32px 0; border-top:2px solid var(--neutral-lighter); }
+.step-num { font-size:40px; font-weight:500; color:var(--neutral-lighter); margin-bottom:8px; }
+.step h3 { font-size:18px; font-weight:500; margin-bottom:8px; }
+.step p  { font-size:14px; color:var(--neutral); line-height:1.6; }
+.step .asset-row { margin-top:12px; }
+
+.rtb-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:48px; }
+.rtb-card { background:white; border:1px solid var(--neutral-lighter); border-radius:12px; padding:32px; }
+.rtb-card .icon { font-size:32px; margin-bottom:16px; }
+.rtb-card h3 { font-size:18px; font-weight:500; margin-bottom:10px; }
+.rtb-card p  { font-size:14px; color:var(--neutral); line-height:1.65; }
+
+.roadmap-list { margin-top:32px; }
+.roadmap-row { display:flex; align-items:flex-start; gap:24px; padding:24px 0; border-bottom:1px solid var(--neutral-lighter); }
+.roadmap-row:first-child { border-top:1px solid var(--neutral-lighter); }
+.roadmap-pill { flex-shrink:0; padding:5px 14px; border-radius:20px; font-size:12px; font-weight:600; }
+.pill-live    { background:var(--bg-mint); color:#1c571a; }
+.pill-soon    { background:var(--bg-almond); color:#6b3e00; }
+.roadmap-row h4 { font-size:16px; font-weight:500; margin-bottom:4px; }
+.roadmap-row p  { font-size:14px; color:var(--neutral); line-height:1.55; }
+
+.faq-open { background:var(--bg-mint); border-radius:0 0 8px 8px; }
+</style>
+</head>
+<body>
+
+<!-- Design nav -->
+<div class="design-nav">
+  <span class="design-nav-label">Pages</span>
+  <a href="index.html">Index</a>
+  <a href="homepage.html">Homepage</a>
+  <a href="trade.html">Trade</a>
+  <a class="active" href="borrowing.html">Borrowing</a>
+  <a href="savings.html">Savings</a>
+  <a href="gold.html">Gold (new)</a>
+  <a href="private-wealth.html">Private Wealth</a>
+</div>
+
+<div class="topbar">
+  <div class="topbar-tabs"><a href="#" class="active">Ledn</a><a href="#">Ledn Private Wealth</a></div>
+  <span>English ▾</span>
+</div>
+<nav class="nav">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/></svg></div>
+    <span class="nav-logo-text">Ledn</span>
+  </a>
+  <div class="nav-links">
+    <a href="#">Products &amp; services ▾</a><a href="#">About us ▾</a><a href="#">Learn more ▾</a><a href="#">Loan calculator</a><a href="#">Blog</a>
+  </div>
+  <div class="nav-ctas"><a href="#" class="btn-primary">Sign up</a><a href="#" class="btn-outline">Log in</a></div>
+</nav>
+
+<!-- Hero — unchanged -->
+<div style="position:relative;">
+  <div style="position:absolute;top:12px;right:12px;z-index:10;background:#fffbeb;padding:4px 10px;border-radius:4px;font-size:12px;color:#92400e;border:1px dashed #f59e0b;">Unchanged — existing hero</div>
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Loans backed by bitcoin</h1>
+      <p class="hero-sub">Get the funds you need, keep the bitcoin you love.</p>
+      <div style="margin-top:8px;"><a href="#" class="btn-outline-white btn-lg">Open an account</a></div>
+    </div>
+    <div class="hero-image" style="background:url('https://cdn.prod.website-files.com/67dd7d513168f4f6b7195946/67dd7d513168f4f6b7195a29_hero-borrowing.webp') center/cover;"></div>
+  </div>
+</div>
+
+<!-- Loan products — unchanged -->
+<section class="section section-white">
+  <div class="container">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:32px;">
+      <div class="asset-icon btc" style="width:32px;height:32px;font-size:15px;">₿</div>
+      <h2 style="font-size:32px;font-weight:500;">Bitcoin loans</h2>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Bitcoin-backed Loans</h3>
+        <p>A fast and convenient way to access dollars without having to sell your BTC. You typically do not create a taxable event, and most importantly, you get to keep your BTC.</p>
+        <div style="margin-top:16px;font-size:14px;color:var(--neutral);">
+          Annual interest rate: 7.99%–9.49%*<br>Admin fee: 2%<br><strong style="color:var(--brand-black);">APR: 9.99%–11.49%</strong>
+        </div>
+        <div class="card-ctas"><a href="#" class="btn-primary">Apply now</a><a href="#" class="btn-outline">Read more</a></div>
+      </div>
+      <div class="card">
+        <h3>B2X</h3>
+        <p>A one-stop service that combines a Bitcoin-backed Loan and a BTC purchase, allowing you to double your BTC balance. Quick and simple.</p>
+        <div style="margin-top:16px;font-size:14px;color:var(--neutral);">
+          Annual interest rate: 7.99%–9.49%*<br>Admin fee: 2%<br><strong style="color:var(--brand-black);">APR: 9.99%–11.49%</strong>
+        </div>
+        <div class="card-ctas"><a href="#" class="btn-primary">Apply now</a><a href="#" class="btn-outline">Read more</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works — STEP 3 UPDATED -->
+<div style="border:3px dashed rgba(245,158,11,.5);">
+  <div style="background:#fffbeb;padding:8px 16px;font-size:13px;color:#78350f;">
+    <strong>UPDATED:</strong> Step 3 — disbursement currencies expanded to include USDT &amp; USAT
+  </div>
+  <section class="section section-mint">
+    <div class="container">
+      <h2 style="font-size:40px;font-weight:500;">How do Bitcoin-backed loans work?</h2>
+      <div class="steps-row">
+        <div class="step">
+          <div class="step-num">1.</div>
+          <h3>Submit your loan application</h3>
+          <p>Borrow 50% of the value of your BTC. No credit check required.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2.</div>
+          <h3>Deposit your BTC</h3>
+          <p>Send your Bitcoin to your loan. Held securely in custody throughout.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3.</div>
+          <h3>Receive your funds <span class="updated-badge">UPDATED</span></h3>
+          <p>Receive your loan in your preferred currency:</p>
+          <div class="asset-row" style="margin-top:12px;display:flex;flex-wrap:wrap;gap:6px;">
+            <span style="background:var(--bg-mint);border-radius:20px;padding:4px 12px;font-size:13px;font-weight:500;">USD</span>
+            <span style="background:var(--bg-mint);border-radius:20px;padding:4px 12px;font-size:13px;font-weight:500;">CAD</span>
+            <span style="background:#e8f4ff;border-radius:20px;padding:4px 12px;font-size:13px;font-weight:500;color:#1e4078;">USDC</span>
+            <span style="background:#e8f7f3;border-radius:20px;padding:4px 12px;font-size:13px;font-weight:500;color:#1a5c43;border:1.5px solid var(--usdt);">USDT ✦</span>
+            <span style="background:#eff6ff;border-radius:20px;padding:4px 12px;font-size:13px;font-weight:500;color:#1e3a8a;border:1.5px solid var(--usat);">USAT ✦</span>
+          </div>
+          <p style="font-size:12px;color:var(--neutral);margin-top:8px;">✦ New stablecoin rails</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4.</div>
+          <h3>Manage your loan</h3>
+          <p>Monitor LTV, top up collateral, repay early — all without penalty.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- NEW: More stablecoin rails RTB section -->
+<div style="border:3px dashed rgba(245,158,11,.5);border-top:none;">
+  <div style="background:#fffbeb;padding:8px 16px;font-size:13px;color:#78350f;">
+    <strong>NEW SECTION:</strong> "More stablecoin rails" — reasons to believe for USDT/USAT
+  </div>
+  <section class="section section-white">
+    <div class="container">
+      <div class="section-header">
+        <h2>More flexibility for your loans</h2>
+        <p>We've expanded our stablecoin rails so your loan works the way you do — no unnecessary swaps, no friction.</p>
+      </div>
+      <div class="rtb-grid">
+        <div class="rtb-card">
+          <div class="icon">₮</div>
+          <h3>USDT support <span class="new-badge">NEW</span></h3>
+          <p>Receive your loan disbursement and make repayments in USDT — Tether's market-leading stablecoin, now a first-class rail on Ledn alongside USDC.</p>
+        </div>
+        <div class="rtb-card">
+          <div class="icon">$</div>
+          <h3>USAT support <span class="new-badge">NEW</span></h3>
+          <p>USAT is now fully supported for disbursements and repayments, giving you a third stablecoin option that matches your existing holdings.</p>
+        </div>
+        <div class="rtb-card">
+          <div class="icon">⚡</div>
+          <h3>No third-party swaps</h3>
+          <p>By bringing USDT and USAT to parity with USDC, we've eliminated the need to swap currencies outside Ledn. Manage everything in one place.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- NEW: Gold lending roadmap teaser -->
+<div style="border:3px dashed rgba(245,158,11,.5);border-top:none;">
+  <div style="background:#fffbeb;padding:8px 16px;font-size:13px;color:#78350f;">
+    <strong>NEW SECTION:</strong> Gold-backed lending roadmap — brief says "this is the first step toward a complete gold-integrated lending experience"
+  </div>
+  <section class="section" style="background:var(--bg-almond);">
+    <div class="container">
+      <div style="max-width:680px;">
+        <p style="font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6b3e00;margin-bottom:12px;">What's next</p>
+        <h2 style="font-size:40px;font-weight:500;">Gold-backed lending roadmap</h2>
+        <p style="font-size:17px;color:var(--neutral);margin-top:12px;line-height:1.65;">This launch is the first step toward a complete gold-integrated lending experience. While you can hold and trade XAUt today, XAUt-backed loans are coming later this year.</p>
+      </div>
+      <div class="roadmap-list">
+        <div class="roadmap-row">
+          <span class="roadmap-pill pill-live">Live now</span>
+          <div>
+            <h4>Hold &amp; trade Gold (XAUt)</h4>
+            <p>Store XAUt in your Transaction Account alongside BTC. Trade across 10 pairs including all XAUt combinations.</p>
+          </div>
+        </div>
+        <div class="roadmap-row">
+          <span class="roadmap-pill pill-live">Live now</span>
+          <div>
+            <h4>USDT &amp; USAT loan rails</h4>
+            <p>Receive and repay loans in USDT or USAT — no external swaps required.</p>
+          </div>
+        </div>
+        <div class="roadmap-row">
+          <span class="roadmap-pill pill-soon">Coming soon</span>
+          <div>
+            <h4>XAUt-backed loans</h4>
+            <p>Unlock liquidity against your gold holdings without selling. Full XAUt collateral support launching later this year.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Collateral management — unchanged -->
+<section class="section section-white">
+  <div class="container">
+    <div style="position:relative;padding-right:120px;">
+      <div style="position:absolute;top:0;right:0;background:#f5f5f5;padding:4px 10px;border-radius:4px;font-size:12px;color:#888;border:1px solid #e0e0e0;">Unchanged</div>
+    </div>
+    <h2 style="font-size:40px;font-weight:500;margin-bottom:32px;">Collateral management</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Standard</h3>
+        <p>Get the lowest interest rate available. Ledn has the right to lend collateral to earn interest. Information always available in our monthly Open Book Report.</p>
+      </div>
+      <div class="card" style="border-color:var(--primary);border-width:2px;">
+        <h3>Custodied ✓</h3>
+        <p>Collateral is held in custody with Ledn or our funding partner. Not lent out to generate interest. Legally ring-fenced from a funding partner's assets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ — updated answer -->
+<div style="border:3px dashed rgba(245,158,11,.5);">
+  <div style="background:#fffbeb;padding:8px 16px;font-size:13px;color:#78350f;">
+    <strong>UPDATED:</strong> FAQ answer for "What currency can I get my loan in?" — USDT &amp; USAT added
+  </div>
+  <section class="section section-white">
+    <div class="container">
+      <h2 style="font-size:40px;font-weight:500;margin-bottom:32px;">Your Crypto Loan questions answered</h2>
+      <ul class="faq-list">
+        <li class="faq-item">
+          <div class="faq-q">What are crypto backed loans? <span>+</span></div>
+        </li>
+        <li class="faq-item">
+          <div class="faq-q">What are Ledn's rates for bitcoin loans? <span>+</span></div>
+        </li>
+        <li class="faq-item" style="background:var(--bg-mint);padding:20px 16px;border-radius:8px;border-bottom:none;margin-bottom:4px;">
+          <div class="faq-q" style="color:var(--primary);">What currency can I get my loan in? <span class="updated-badge">UPDATED</span> <span>−</span></div>
+          <div class="faq-a" style="color:var(--brand-black);">
+            <p>Loans can be funded in <strong>USD</strong>, <strong>USDC</strong>, <strong>USDT</strong>, <strong>USAT</strong>, or your local currency. The loan will be denominated in US dollars regardless of the currency in which it is disbursed.</p>
+            <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;">
+              <span style="background:white;border:1px solid var(--neutral-lighter);border-radius:20px;padding:4px 14px;font-size:13px;font-weight:500;">USD</span>
+              <span style="background:white;border:1px solid var(--neutral-lighter);border-radius:20px;padding:4px 14px;font-size:13px;font-weight:500;">CAD</span>
+              <span style="background:white;border:1.5px solid var(--usdc);border-radius:20px;padding:4px 14px;font-size:13px;font-weight:500;color:#1e4078;">USDC</span>
+              <span style="background:white;border:1.5px solid var(--usdt);border-radius:20px;padding:4px 14px;font-size:13px;font-weight:500;color:#1a5c43;">USDT <span class="new-badge" style="font-size:10px;">NEW</span></span>
+              <span style="background:white;border:1.5px solid var(--usat);border-radius:20px;padding:4px 14px;font-size:13px;font-weight:500;color:#1e3a8a;">USAT <span class="new-badge" style="font-size:10px;">NEW</span></span>
+            </div>
+          </div>
+        </li>
+        <li class="faq-item">
+          <div class="faq-q">Is there a minimum amount for a crypto backed loan? <span>+</span></div>
+        </li>
+        <li class="faq-item">
+          <div class="faq-q">Are crypto backed loans available in my country? <span>+</span></div>
+        </li>
+        <li class="faq-item">
+          <div class="faq-q">Can I pay back my loan before the end of the 12-month term? <span>+</span></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<!-- CTA -->
+<section class="section section-primary" style="padding:48px 0;">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+    <h2 style="font-size:32px;font-weight:500;color:white;">Join Ledn today</h2>
+    <a href="#" class="btn-outline-white btn-lg">Open an account</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><div class="footer-logo-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--primary)"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/></svg></div><span class="footer-logo-text">Ledn</span></div>
+        <p class="footer-tagline">Bitcoin. Gold. The stablecoins the world runs on.</p>
+      </div>
+      <div><h4>Social</h4><ul><li><a href="#">Facebook</a></li><li><a href="#">Instagram</a></li><li><a href="#">LinkedIn</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#">FAQ</a></li><li><a href="#">Security</a></li><li><a href="#">Careers</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="#">Legal</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Disclaimers</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>SOC 2 Type 2 certified</span><span>© 2026, 21 Technologies Inc.</span></div>
+  </div>
+</footer>
+
+</body>
+</html>

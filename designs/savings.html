@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transaction &amp; Growth Accounts — Ledn Design Mockup</title>
+<link rel="stylesheet" href="design-system.css">
+<style>
+.account-card {
+  background: white;
+  border: 1px solid var(--neutral-lighter);
+  border-radius: 16px;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.account-card h3 { font-size: 24px; font-weight: 500; }
+.account-card .account-icon {
+  width: 48px; height: 48px;
+  background: var(--bg-mint);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+}
+.account-feature { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: var(--neutral); }
+.account-feature::before { content: '—'; color: var(--neutral-lighter); flex-shrink: 0; margin-top: 1px; }
+
+.rate-card {
+  background: white;
+  border: 1px solid var(--neutral-lighter);
+  border-radius: 12px;
+  padding: 28px;
+}
+.rate-card .asset-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.rate-card h3 { font-size: 20px; font-weight: 500; }
+.rate-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--neutral-lighter); font-size: 15px; }
+.rate-row:last-child { border-bottom: none; }
+.rate-val { font-size: 20px; font-weight: 600; color: var(--primary); }
+
+.xaut-explainer {
+  background: linear-gradient(135deg, #3d2c00 0%, #6b4a00 100%);
+  border-radius: 16px;
+  padding: 40px;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.xaut-fact { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
+.xaut-fact-icon { flex-shrink: 0; width: 36px; height: 36px; background: rgba(200,169,81,.25); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.xaut-fact h4 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+.xaut-fact p  { font-size: 13px; color: rgba(255,255,255,.65); line-height: 1.55; }
+</style>
+</head>
+<body>
+
+<div class="design-nav">
+  <span class="design-nav-label">Pages</span>
+  <a href="index.html">Index</a>
+  <a href="homepage.html">Homepage</a>
+  <a href="trade.html">Trade</a>
+  <a href="borrowing.html">Borrowing</a>
+  <a class="active" href="savings.html">Savings</a>
+  <a href="gold.html">Gold (new)</a>
+  <a href="private-wealth.html">Private Wealth</a>
+</div>
+
+<div class="topbar">
+  <div class="topbar-tabs"><a href="#" class="active">Ledn</a><a href="#">Ledn Private Wealth</a></div>
+  <span>English ▾</span>
+</div>
+<nav class="nav">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/></svg></div>
+    <span class="nav-logo-text">Ledn</span>
+  </a>
+  <div class="nav-links"><a href="#">Products &amp; services ▾</a><a href="#">About us ▾</a><a href="#">Learn more ▾</a><a href="#">Loan calculator</a><a href="#">Blog</a></div>
+  <div class="nav-ctas"><a href="#" class="btn-primary">Sign up</a><a href="#" class="btn-outline">Log in</a></div>
+</nav>
+
+<!-- Hero — unchanged -->
+<div style="position:relative;">
+  <div style="position:absolute;top:12px;right:12px;z-index:10;background:#fffbeb;padding:4px 10px;border-radius:4px;font-size:12px;color:#92400e;border:1px dashed #f59e0b;">Unchanged — existing hero</div>
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Transaction &amp; Growth accounts</h1>
+      <p class="hero-sub">Growth accounts let you hodl and earn up to 6.5% APY*. Grow your assets while knowing you are benefiting from industry leading safeguards.</p>
+    </div>
+    <div class="hero-image" style="background:url('https://cdn.prod.website-files.com/67dd7d513168f4f6b7195946/67dd7d513168f4f6b71959fa_hero-savings.webp') center/cover;"></div>
+  </div>
+</div>
+
+<!-- ── SUPPORTED ASSETS (UPDATED) ─────────────────────────────── -->
+<div style="border:3px dashed rgba(245,158,11,.5);">
+  <div style="background:#fffbeb;padding:8px 16px;font-size:13px;color:#78350f;">
+    <strong>UPDATED:</strong> Supported assets — XAUt and USAT added; asset icons row updated
+  </div>
+  <section class="section section-white">
+    <div class="container">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:32px;">
+        <div style="max-width:480px;">
+          <h2 style="font-size:40px;font-weight:500;margin-bottom:12px;">Supported digital assets <span class="updated-badge">UPDATED</span></h2>
+          <p style="font-size:16px;color:var(--neutral);line-height:1.65;">We pride ourselves on only supporting reliable digital assets with genuine utility and proven security. We will never offer a coin that we would not be comfortable using ourselves.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div>
+            <p style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--neutral);margin-bottom:10px;">Transaction Account</p>
+            <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+              <div style="display:flex;align-items:center;gap:8px;background:var(--bg-neutral);border-radius:30px;padding:8px 16px 8px 10px;">
+                <div class="asset-icon btc" style="width:32px;height:32px;font-size:15px;">₿</div>
+                <span style="font-size:14px;font-weight:500;">BTC</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;background:#fffbeb;border:1.5px solid var(--xaut);border-radius:30px;padding:8px 16px 8px 10px;">
+                <div class="asset-icon xaut" style="width:32px;height:32px;font-size:11px;">XAUt</div>
+                <span style="font-size:14px;font-weight:500;">Gold (XAUt)</span>
+                <span class="new-badge" style="font-size:10px;">NEW</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;background:var(--bg-neutral);border-radius:30px;padding:8px 16px 8px 10px;">
+                <div class="asset-icon usdt" style="width:32px;height:32px;font-size:13px;">₮</div>
+                <span style="font-size:14px;font-weight:500;">USDT</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;background:#eff6ff;border:1.5px solid var(--usat);border-radius:30px;padding:8px 16px 8px 10px;">
+                <div class="asset-icon usat" style="width:32px;height:32px;font-size:13px;">$</div>
+                <span style="font-size:14px;font-weight:500;">USAT</span>
+                <span class="new-badge" style="font-size:10px;">NEW</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;background:var(--bg-neutral);border-radius:30px;padding:8px 16px 8px 10px;">
+                <div class="asset-icon usdc" style="width:32px;height:32px;font-size:13px;">©</div>
+                <span style="font-size:14px;font-weight:500;">USDC</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--neutral);margin-bottom:10px;">Growth Account (interest-earning)</p>
+            <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+              <div style="display:flex;align-items:center;gap:8px;background:var(--bg-neutral);border-radius:30px;padding:8px 16px 8px 10px;">
+                <div class="asset-icon usdt" style="width:32px;height:32px;font-size:13px;">₮</div>
+                <span style="font-size:14px;font-weight:500;">USDT</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;background:var(--bg-neutral);border-radius:30px;padding:8px 16px 8px 10px;">
+                <div class="asset-icon usdc" style="width:32px;height:32px;font-size:13px;">©</div>
+                <span style="font-size:14px;font-weight:500;">USDC</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ── ACCOUNT CARDS (UPDATED) ────────────────────────────────── -->
+<div style="border:3px dashed rgba(245,158,11,.5);border-top:none;">
+  <div style="background:#fffbeb;padding:8px 16px;font-size:13px;color:#78350f;">
+    <strong>UPDATED:</strong> Transaction Account card — now lists BTC, XAUt, USDT, USAT, USDC
+  </div>
+  <section class="section section-mint">
+    <div class="container">
+      <h2 style="font-size:40px;font-weight:500;margin-bottom:40px;">Our products</h2>
+      <div class="card-grid">
+        <!-- Growth account — unchanged -->
+        <div class="account-card">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div class="account-icon">⊕</div>
+            <div>
+              <div style="font-size:12px;color:var(--neutral);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px;">Interest-earning</div>
+              <h3>Growth account</h3>
+            </div>
+            <div style="margin-left:auto;display:flex;gap:6px;">
+              <div class="asset-icon usdc" style="width:28px;height:28px;font-size:11px;">©</div>
+              <div class="asset-icon usdt" style="width:28px;height:28px;font-size:11px;">₮</div>
+            </div>
+          </div>
+          <div class="account-feature">Earn up to 6.5% APY.</div>
+          <div class="account-feature">Full visibility into how we generate interest.</div>
+          <div class="account-feature">Stablecoin growth accounts fund our 2:1 collateralized retail loan book, which has never experienced a loan loss.</div>
+          <div class="account-feature">Asset control — transfer freely between Transaction and Growth accounts.</div>
+          <div style="margin-top:8px;"><a href="#" class="btn-primary">Open an account</a></div>
+        </div>
+        <!-- Transaction account — updated -->
+        <div class="account-card" style="border:2px solid var(--xaut);">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div class="account-icon" style="background:#fffbeb;">⇄</div>
+            <div>
+              <div style="font-size:12px;color:var(--neutral);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px;">Hold &amp; manage</div>
+              <h3>Transaction account <span class="updated-badge">UPDATED</span></h3>
+            </div>
+          </div>
+          <!-- Updated asset icons row -->
+          <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;padding:12px 0;border-top:1px solid var(--neutral-lighter);border-bottom:1px solid var(--neutral-lighter);">
+            <div class="asset-icon btc" style="width:32px;height:32px;font-size:14px;">₿</div>
+            <div class="asset-icon xaut" style="width:32px;height:32px;font-size:10px;border:2px solid #fffbeb;">XAUt</div>
+            <span class="new-badge" style="font-size:10px;">NEW</span>
+            <div class="asset-icon usdt" style="width:32px;height:32px;font-size:12px;margin-left:8px;">₮</div>
+            <div class="asset-icon usat" style="width:32px;height:32px;font-size:12px;border:2px solid #eff6ff;">$</div>
+            <span class="new-badge" style="font-size:10px;">NEW</span>
+            <div class="asset-icon usdc" style="width:32px;height:32px;font-size:12px;margin-left:8px;">©</div>
+          </div>
+          <div class="account-feature">Manage your day-to-day activities.</div>
+          <div class="account-feature">Primarily held in cold storage.</div>
+          <div class="account-feature">Direct access to Ledn products and your Growth account.</div>
+          <div class="account-feature">Add and withdraw your digital assets to and from Ledn.</div>
+          <div style="margin-top:8px;"><a href="#" class="btn-primary">Open an account</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ── NEW: XAUt EXPLAINER ──────────────────────────────────────── -->
+<div style="border:3px dashed rgba(245,158,11,.5);border-top:none;">
+  <div style="background:#fffbeb;padding:8px 16px;font-size:13px;color:#78350f;">
+    <strong>NEW SECTION:</strong> What is XAUt? — needed because many users won't know what it is
+  </div>
+  <section class="section section-white">
+    <div class="container">
+      <div class="xaut-explainer">
+        <div>
+          <p style="font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--xaut);margin-bottom:12px;">New on Ledn</p>
+          <h2 style="font-size:40px;font-weight:500;color:white;line-height:1.1;margin-bottom:16px;">Hold gold.<br>Digitally.</h2>
+          <p style="font-size:16px;color:rgba(255,255,255,.7);line-height:1.65;margin-bottom:24px;">Gold (XAUt) by Tether lets you own physical gold as a digital asset. Each token represents one troy ounce of gold held in Swiss vaults — verifiable, scarce, and non-sovereign.</p>
+          <a href="gold.html" class="btn-outline-white">Learn about gold on Ledn →</a>
+        </div>
+        <div>
+          <div class="xaut-fact">
+            <div class="xaut-fact-icon">⬡</div>
+            <div>
+              <h4>1 XAUt = 1 troy oz of physical gold</h4>
+              <p>Each token is backed by physical gold held in professional vault facilities in Switzerland.</p>
+            </div>
+          </div>
+          <div class="xaut-fact">
+            <div class="xaut-fact-icon">🔒</div>
+            <div>
+              <h4>Verifiably scarce</h4>
+              <p>Unlike fiat currency, gold cannot be created from nothing. XAUt gives you digital access to this fundamental property.</p>
+            </div>
+          </div>
+          <div class="xaut-fact">
+            <div class="xaut-fact-icon">⚡</div>
+            <div>
+              <h4>Trade across 10 pairs on Ledn</h4>
+              <p>Instantly swap XAUt against BTC, USDT, USAT, or USDC — no external exchange needed.</p>
+            </div>
+          </div>
+          <div style="background:rgba(200,169,81,.15);border:1px solid rgba(200,169,81,.3);border-radius:8px;padding:14px 16px;margin-top:4px;">
+            <p style="font-size:13px;color:rgba(255,255,255,.7);">
+              <strong style="color:var(--xaut);">Important:</strong> XAUt is available to hold and trade today. XAUt-backed loans are on the roadmap for later this year.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Growth account rates — USAT note added -->
+<div style="border:3px dashed rgba(245,158,11,.5);border-top:none;">
+  <div style="background:#fffbeb;padding:8px 16px;font-size:13px;color:#78350f;">
+    <strong>UPDATED:</strong> Rates section — USAT row added (confirm yield availability with product team)
+  </div>
+  <section class="section section-white">
+    <div class="container">
+      <h2 style="font-size:40px;font-weight:500;margin-bottom:40px;">Our Growth account rates</h2>
+      <div class="card-grid" style="grid-template-columns:repeat(3,1fr);">
+        <div class="rate-card">
+          <div class="asset-header">
+            <div class="asset-icon usdc asset-icon-lg">©</div>
+            <h3>USDC</h3>
+          </div>
+          <div class="rate-row"><span>Below 100,000 USDC</span><span class="rate-val">5.5% APY</span></div>
+          <div class="rate-row"><span>Excess over 100,000 USDC</span><span class="rate-val">6.5% APY</span></div>
+          <div style="margin-top:20px;"><a href="#" class="btn-outline">Find out more</a></div>
+        </div>
+        <div class="rate-card">
+          <div class="asset-header">
+            <div class="asset-icon usdt asset-icon-lg">₮</div>
+            <h3>USDT</h3>
+          </div>
+          <div class="rate-row"><span>Below 100,000 USDT</span><span class="rate-val">5.5% APY</span></div>
+          <div class="rate-row"><span>Excess over 100,000 USDT</span><span class="rate-val">6.5% APY</span></div>
+          <div style="margin-top:20px;"><a href="#" class="btn-outline">Find out more</a></div>
+        </div>
+        <div class="rate-card" style="border:2px dashed var(--usat);opacity:.8;">
+          <div class="asset-header">
+            <div class="asset-icon usat asset-icon-lg">$</div>
+            <h3>USAT <span class="new-badge">CONFIRM WITH PRODUCT</span></h3>
+          </div>
+          <div style="background:#eff6ff;border-radius:8px;padding:14px;font-size:14px;color:#1e3a8a;">
+            USAT Growth account rates — confirm with product team whether USAT earns yield at launch. If yes, rates shown here. If no, remove this card.
+          </div>
+          <div style="margin-top:20px;"><a href="#" class="btn-outline">Find out more</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Ledn difference — unchanged -->
+<section class="section section-mint">
+  <div class="container">
+    <div style="position:relative;">
+      <div style="position:absolute;top:0;right:0;background:#f5f5f5;padding:4px 10px;border-radius:4px;font-size:12px;color:#888;border:1px solid #e0e0e0;">Unchanged</div>
+    </div>
+    <h2 style="font-size:40px;font-weight:500;margin-bottom:40px;">The Ledn difference</h2>
+    <div style="display:grid;grid-template-columns:64px 1fr;gap:20px;padding:32px 0;border-top:1px solid rgba(0,0,0,.08);">
+      <div></div>
+      <div><h3 style="font-size:20px;font-weight:500;margin-bottom:8px;">More control over your assets</h3><p style="font-size:15px;color:var(--neutral);">Two dedicated accounts for each digital asset — interest-earning Growth and non-interest-earning Transaction — based on your goals.</p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:64px 1fr;gap:20px;padding:32px 0;border-top:1px solid rgba(0,0,0,.08);">
+      <div></div>
+      <div><h3 style="font-size:20px;font-weight:500;margin-bottom:8px;">Secure</h3><p style="font-size:15px;color:var(--neutral);">Interest for USD Stablecoin Growth accounts is generated primarily by lending to Ledn's BTC-collateralized retail loan book, which has a proven track record with no history of loan losses.</p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:64px 1fr;gap:20px;padding:32px 0;border-top:1px solid rgba(0,0,0,.08);">
+      <div></div>
+      <div><h3 style="font-size:20px;font-weight:500;margin-bottom:8px;">Transparency</h3><p style="font-size:15px;color:var(--neutral);">Gain clearer insights into how interest is generated with our revamped client dashboard, including Ledn's Open Book Report.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section-primary" style="padding:48px 0;">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+    <h2 style="font-size:32px;font-weight:500;color:white;">Join Ledn today</h2>
+    <a href="#" class="btn-outline-white btn-lg">Open an account</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-logo"><div class="footer-logo-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--primary)"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/></svg></div><span class="footer-logo-text">Ledn</span></div><p class="footer-tagline">Bitcoin. Gold. The stablecoins the world runs on.</p></div>
+      <div><h4>Social</h4><ul><li><a href="#">Facebook</a></li><li><a href="#">Instagram</a></li><li><a href="#">LinkedIn</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#">FAQ</a></li><li><a href="#">Security</a></li><li><a href="#">Careers</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="#">Legal</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Disclaimers</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>SOC 2 Type 2 certified</span><span>© 2026, 21 Technologies Inc.</span></div>
+  </div>
+</footer>
+
+</body>
+</html>

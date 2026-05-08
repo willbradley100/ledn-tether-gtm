@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trade — Ledn Design Mockup</title>
+<link rel="stylesheet" href="design-system.css">
+<style>
+.pairs-section { padding: 80px 0; background: var(--bg-mint); }
+.pairs-intro { text-align:center; margin-bottom: 48px; }
+.pairs-intro h2 { font-size: 40px; font-weight: 500; }
+.pairs-intro p  { font-size: 18px; color: var(--neutral); margin-top: 12px; }
+.pairs-full-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+.pair-card {
+  background: white;
+  border: 1px solid var(--neutral-lighter);
+  border-radius: 12px;
+  padding: 22px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  transition: box-shadow .2s;
+}
+.pair-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.08); }
+.pair-icons { display: flex; align-items: center; }
+.pair-icons .asset-icon { border: 2.5px solid white; }
+.pair-icons .asset-icon:last-child { margin-left: -10px; }
+.pair-name { font-size: 15px; font-weight: 600; color: var(--brand-black); }
+.pair-desc { font-size: 12px; color: var(--neutral); }
+
+.hero-assets {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.hero-asset-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 30px;
+  padding: 6px 14px 6px 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+.why-row {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 20px;
+  padding: 36px 0;
+  border-top: 1px solid var(--neutral-lighter);
+  align-items: start;
+}
+.why-row:first-child { border-top: none; }
+.why-icon {
+  width: 48px; height: 48px;
+  background: var(--bg-mint);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+}
+.why-row h3 { font-size: 20px; font-weight: 500; margin-bottom: 8px; }
+.why-row p  { font-size: 15px; color: var(--neutral); line-height: 1.65; }
+</style>
+</head>
+<body>
+
+<!-- Design nav -->
+<div class="design-nav">
+  <span class="design-nav-label">Pages</span>
+  <a href="index.html">Index</a>
+  <a href="homepage.html">Homepage</a>
+  <a class="active" href="trade.html">Trade</a>
+  <a href="borrowing.html">Borrowing</a>
+  <a href="savings.html">Savings</a>
+  <a href="gold.html">Gold (new)</a>
+  <a href="private-wealth.html">Private Wealth</a>
+</div>
+
+<!-- Topbar -->
+<div class="topbar">
+  <div class="topbar-tabs">
+    <a href="#" class="active">Ledn</a>
+    <a href="#">Ledn Private Wealth</a>
+  </div>
+  <span>English ▾</span>
+</div>
+
+<!-- Nav -->
+<nav class="nav">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/></svg>
+    </div>
+    <span class="nav-logo-text">Ledn</span>
+  </a>
+  <div class="nav-links">
+    <a href="#">Products &amp; services ▾</a>
+    <a href="#">About us ▾</a>
+    <a href="#">Learn more ▾</a>
+    <a href="#">Loan calculator</a>
+    <a href="#">Blog</a>
+  </div>
+  <div class="nav-ctas">
+    <a href="#" class="btn-primary">Sign up</a>
+    <a href="#" class="btn-outline">Log in</a>
+  </div>
+</nav>
+
+<!-- ── HERO (UPDATED) ──────────────────────────────────────────── -->
+<div style="border:3px dashed rgba(245,158,11,.5); position:relative;">
+  <div style="position:absolute;top:12px;left:12px;z-index:10;">
+    <span class="new-badge">UPDATED</span>
+    <span style="font-size:12px;color:#92400e;margin-left:8px;background:#fffbeb;padding:3px 8px;border-radius:4px;">Hero headline, subtext & asset icons</span>
+  </div>
+  <div class="hero" style="min-height:440px;">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Zero fees · Instant settlement</div>
+      <h1>Trade across 10 pairs.</h1>
+      <p class="hero-sub">Instantly swap between Bitcoin, Gold (XAUt), USDT, USAT, and USDC — all in one platform, with no trading fees.</p>
+      <div class="hero-assets">
+        <div class="hero-asset-pill">
+          <div class="asset-icon btc" style="width:28px;height:28px;font-size:14px;">₿</div>
+          BTC
+        </div>
+        <div class="hero-asset-pill">
+          <div class="asset-icon xaut" style="width:28px;height:28px;font-size:11px;">XAUt</div>
+          Gold
+        </div>
+        <div class="hero-asset-pill">
+          <div class="asset-icon usdt" style="width:28px;height:28px;font-size:11px;">₮</div>
+          USDT
+        </div>
+        <div class="hero-asset-pill">
+          <div class="asset-icon usat" style="width:28px;height:28px;font-size:11px;">$</div>
+          USAT
+        </div>
+        <div class="hero-asset-pill">
+          <div class="asset-icon usdc" style="width:28px;height:28px;font-size:11px;">©</div>
+          USDC
+        </div>
+      </div>
+      <div style="margin-top:8px;">
+        <a href="#" class="btn-outline-white">Start trading</a>
+      </div>
+    </div>
+    <div class="hero-image" style="background:url('https://cdn.prod.website-files.com/67dd7d513168f4f6b7195946/67dd7d513168f4f6b7195a82_hero-trade.webp') center/cover;"></div>
+  </div>
+</div>
+
+<!-- ── 10 TRADING PAIRS (NEW SECTION) ────────────────────────── -->
+<div style="border:3px dashed rgba(245,158,11,.5);border-top:none;">
+  <div style="background:#fffbeb;padding:8px 16px;font-size:13px;color:#78350f;">
+    <strong>NEW SECTION:</strong> Trading pairs matrix — replaces the single BTC/USDC mention
+  </div>
+  <div class="pairs-section">
+    <div class="container">
+      <div class="pairs-intro">
+        <h2>10 integrated trading pairs</h2>
+        <p>Swap between any combination of our five supported assets — instantly, with no fees.</p>
+      </div>
+      <div class="pairs-full-grid">
+        <!-- BTC pairs -->
+        <div class="pair-card">
+          <div class="pair-icons">
+            <div class="asset-icon btc">₿</div>
+            <div class="asset-icon xaut">XAUt</div>
+          </div>
+          <div class="pair-name">BTC / XAUt</div>
+          <div class="pair-desc">Bitcoin ↔ Gold</div>
+        </div>
+        <div class="pair-card">
+          <div class="pair-icons">
+            <div class="asset-icon btc">₿</div>
+            <div class="asset-icon usdt">₮</div>
+          </div>
+          <div class="pair-name">BTC / USDT</div>
+          <div class="pair-desc">Bitcoin ↔ Tether</div>
+        </div>
+        <div class="pair-card">
+          <div class="pair-icons">
+            <div class="asset-icon btc">₿</div>
+            <div class="asset-icon usat">$</div>
+          </div>
+          <div class="pair-name">BTC / USAT</div>
+          <div class="pair-desc">Bitcoin ↔ USAT</div>
+        </div>
+        <div class="pair-card">
+          <div class="pair-icons">
+            <div class="asset-icon btc">₿</div>
+            <div class="asset-icon usdc">©</div>
+          </div>
+          <div class="pair-name">BTC / USDC</div>
+          <div class="pair-desc">Bitcoin ↔ USDC</div>
+        </div>
+        <!-- XAUt pairs -->
+        <div class="pair-card">
+          <div class="pair-icons">
+            <div class="asset-icon xaut">XAUt</div>
+            <div class="asset-icon usdt">₮</div>
+          </div>
+          <div class="pair-name">XAUt / USDT</div>
+          <div class="pair-desc">Gold ↔ Tether</div>
+        </div>
+        <div class="pair-card">
+          <div class="pair-icons">
+            <div class="asset-icon xaut">XAUt</div>
+            <div class="asset-icon usat">$</div>
+          </div>
+          <div class="pair-name">XAUt / USAT</div>
+          <div class="pair-desc">Gold ↔ USAT</div>
+        </div>
+        <div class="pair-card">
+          <div class="pair-icons">
+            <div class="asset-icon xaut">XAUt</div>
+            <div class="asset-icon usdc">©</div>
+          </div>
+          <div class="pair-name">XAUt / USDC</div>
+          <div class="pair-desc">Gold ↔ USDC</div>
+        </div>
+        <!-- Stablecoin pairs -->
+        <div class="pair-card">
+          <div class="pair-icons">
+            <div class="asset-icon usdt">₮</div>
+            <div class="asset-icon usat">$</div>
+          </div>
+          <div class="pair-name">USDT / USAT</div>
+          <div class="pair-desc">Tether ↔ USAT</div>
+        </div>
+        <div class="pair-card">
+          <div class="pair-icons">
+            <div class="asset-icon usdt">₮</div>
+            <div class="asset-icon usdc">©</div>
+          </div>
+          <div class="pair-name">USDT / USDC</div>
+          <div class="pair-desc">Tether ↔ USDC</div>
+        </div>
+        <div class="pair-card">
+          <div class="pair-icons">
+            <div class="asset-icon usat">$</div>
+            <div class="asset-icon usdc">©</div>
+          </div>
+          <div class="pair-name">USAT / USDC</div>
+          <div class="pair-desc">USAT ↔ USDC</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── THE LEDN DIFFERENCE (UPDATED) ────────────────────────── -->
+<div style="border:3px dashed rgba(245,158,11,.5);border-top:none;">
+  <div style="background:#fffbeb;padding:8px 16px;font-size:13px;color:#78350f;">
+    <strong>UPDATED:</strong> "Balance your assets" copy updated to mention all 5 assets
+  </div>
+  <section class="section section-white">
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:48px;">
+        <h2 style="font-size:40px;font-weight:500;">The Ledn difference</h2>
+        <div style="background:#f0f0f0;padding:8px 16px;border-radius:8px;font-size:14px;color:#555;">
+          ⭐⭐⭐⭐⭐ TrustScore 4.4 · 1,044 reviews
+        </div>
+      </div>
+      <div class="why-row">
+        <div class="why-icon">⚡</div>
+        <div>
+          <h3>Uninterrupted interest<sup>*</sup></h3>
+          <p>Instant trades mean no missed interest. Your newly purchased asset goes directly into your Transaction Account, making sure you never miss an opportunity to earn interest. At Ledn, every little bit counts.</p>
+        </div>
+      </div>
+      <div class="why-row">
+        <div class="why-icon">○</div>
+        <div>
+          <h3>No trading fees</h3>
+          <p>Ledn Trade provides you with a limited-time quote. The price we quote is exactly what you pay. No hidden fees across all 10 pairs.</p>
+        </div>
+      </div>
+      <div class="why-row">
+        <div class="why-icon">⊞</div>
+        <div>
+          <h3>Balance your assets</h3>
+          <p>Take advantage of market opportunities by adjusting your holdings between Bitcoin, Gold (XAUt), USDT, USAT, and USDC — all within one seamless platform.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ── CTA BAND ──────────────────────────────────────────────── -->
+<div class="cta-band">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;">
+    <div>
+      <a href="https://help.ledn.io/hc/en-us/categories/28502581636375" style="color:rgba(255,255,255,.8);font-size:15px;display:flex;align-items:center;gap:8px;text-decoration:none;">Frequently asked questions →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── JOIN TODAY ──────────────────────────────────────────────── -->
+<section class="section section-white">
+  <div class="container">
+    <h2 style="font-size:40px;font-weight:500;margin-bottom:24px;">Join Ledn today</h2>
+    <a href="#" class="btn-primary btn-lg">Open an account</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="footer-logo-icon" style="background:white;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--primary)"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/></svg>
+          </div>
+          <span class="footer-logo-text">Ledn</span>
+        </div>
+        <p class="footer-tagline">Bitcoin. Gold. The stablecoins the world runs on. Built on eight years of trust.</p>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <ul><li><a href="#">Facebook</a></li><li><a href="#">Instagram</a></li><li><a href="#">LinkedIn</a></li></ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul><li><a href="#">FAQ</a></li><li><a href="#">Security</a></li><li><a href="#">Careers</a></li></ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul><li><a href="#">Legal</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Disclaimers</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>SOC 2 Type 2 certified</span>
+      <span>© 2026, 21 Technologies Inc. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

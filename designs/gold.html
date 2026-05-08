@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold (XAUt) — Ledn Design Mockup</title>
+<link rel="stylesheet" href="design-system.css">
+<style>
+/* Gold hero */
+.hero-gold {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+  background: linear-gradient(135deg, #2a1a00 0%, #4a2e00 50%, #6b4200 100%);
+}
+.hero-gold .hero-content { padding: 80px 64px; }
+.hero-gold h1 { font-size: 58px; font-weight: 500; color: white; line-height: 1.05; }
+.hero-gold .hero-sub { font-size: 18px; color: rgba(255,255,255,.7); max-width: 440px; line-height: 1.65; }
+
+/* Gold token visual */
+.gold-token-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4a2e00 0%, #8a5c00 100%);
+  position: relative;
+  overflow: hidden;
+}
+.gold-coin {
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #f5d070, #c8a030 50%, #8a6200 100%);
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0,0,0,.4), inset 0 2px 8px rgba(255,255,255,.3);
+  position: relative;
+  z-index: 1;
+}
+.gold-coin-text { font-size: 40px; font-weight: 700; color: #4a2e00; }
+.gold-coin-sub  { font-size: 12px; font-weight: 700; color: #6b4200; letter-spacing: .1em; text-transform: uppercase; margin-top: 2px; }
+.gold-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(200,160,48,.2);
+}
+
+/* What is XAUt */
+.xaut-what { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.xaut-stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.xaut-stat { background: var(--bg-almond); border-radius: 12px; padding: 24px; }
+.xaut-stat .val { font-size: 32px; font-weight: 600; color: var(--brand-black); }
+.xaut-stat .lbl { font-size: 13px; color: var(--neutral); margin-top: 4px; }
+
+/* Why BTC + Gold */
+.btc-gold-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: rgba(0,0,0,.08);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 48px;
+}
+.split-panel {
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.split-panel.btc-panel  { background: #fff8f0; }
+.split-panel.gold-panel { background: #fffbeb; }
+.split-panel .asset-header { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+.split-panel h3 { font-size: 26px; font-weight: 500; }
+.split-panel p  { font-size: 15px; color: var(--neutral); line-height: 1.65; }
+.split-trait { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--neutral); padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,.06); }
+.split-trait:last-child { border-bottom: none; }
+.split-trait strong { color: var(--brand-black); }
+
+/* Feature steps */
+.feature-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+.feature-step { background: white; border: 1px solid var(--neutral-lighter); border-radius: 12px; padding: 32px; }
+.step-number { font-size: 48px; font-weight: 600; color: var(--bg-mint); line-height: 1; margin-bottom: 16px; }
+.feature-step h3 { font-size: 20px; font-weight: 500; margin-bottom: 10px; }
+.feature-step p  { font-size: 15px; color: var(--neutral); line-height: 1.65; }
+
+/* Roadmap */
+.roadmap-timeline { position: relative; padding-left: 32px; margin-top: 48px; }
+.roadmap-timeline::before { content:''; position:absolute; left:8px; top:0; bottom:0; width:2px; background:var(--neutral-lighter); }
+.timeline-item { position: relative; margin-bottom: 40px; }
+.timeline-dot { position: absolute; left: -28px; top: 4px; width: 16px; height: 16px; border-radius: 50%; border: 2px solid white; }
+.timeline-dot.live { background: var(--usdt); }
+.timeline-dot.soon { background: var(--xaut); }
+.timeline-item h4 { font-size: 18px; font-weight: 500; margin-bottom: 6px; }
+.timeline-item p  { font-size: 15px; color: var(--neutral); line-height: 1.6; }
+.timeline-badge { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; }
+.tl-live { background: var(--bg-mint); color: #1c571a; }
+.tl-soon { background: #fffbeb; color: #8a6000; }
+
+/* Disclaimer box */
+.disclaimer-box {
+  background: var(--bg-almond);
+  border-left: 4px solid var(--xaut);
+  border-radius: 0 8px 8px 0;
+  padding: 16px 20px;
+  font-size: 14px;
+  color: var(--neutral);
+  margin-top: 24px;
+  line-height: 1.6;
+}
+</style>
+</head>
+<body>
+
+<div class="design-nav">
+  <span class="design-nav-label">Pages</span>
+  <a href="index.html">Index</a>
+  <a href="homepage.html">Homepage</a>
+  <a href="trade.html">Trade</a>
+  <a href="borrowing.html">Borrowing</a>
+  <a href="savings.html">Savings</a>
+  <a class="active" href="gold.html">Gold (new)</a>
+  <a href="private-wealth.html">Private Wealth</a>
+</div>
+
+<div style="background:#fffbeb;padding:10px 16px;font-size:13px;color:#78350f;border-bottom:2px dashed rgba(245,158,11,.5);">
+  <strong>NEW PAGE:</strong> Suggested URL: <code>ledn.io/gold</code> or <code>ledn.io/xaut</code> — dedicated landing page for gold (XAUt). Strong SEO opportunity. All content is net-new.
+</div>
+
+<div class="topbar">
+  <div class="topbar-tabs"><a href="#" class="active">Ledn</a><a href="#">Ledn Private Wealth</a></div>
+  <span>English ▾</span>
+</div>
+<nav class="nav">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/></svg></div>
+    <span class="nav-logo-text">Ledn</span>
+  </a>
+  <div class="nav-links"><a href="#">Products &amp; services ▾</a><a href="#">About us ▾</a><a href="#">Learn more ▾</a><a href="#">Loan calculator</a><a href="#">Blog</a></div>
+  <div class="nav-ctas"><a href="#" class="btn-primary">Sign up</a><a href="#" class="btn-outline">Log in</a></div>
+</nav>
+
+<!-- ── HERO ──────────────────────────────────────────────────────── -->
+<div class="hero-gold">
+  <div class="hero-content" style="display:flex;flex-direction:column;justify-content:center;gap:20px;">
+    <p style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--xaut);">Now on Ledn</p>
+    <h1>Hold the world's hardest physical asset.<br>Digitally.</h1>
+    <p class="hero-sub">Gold (XAUt) is now available in your Ledn Transaction Account. Each token represents one troy ounce of physical gold held in Swiss vaults — pair it with Bitcoin to build generational wealth.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px;">
+      <a href="#" class="btn-outline-white btn-lg">Open an account</a>
+      <a href="#" style="color:rgba(255,255,255,.7);font-size:15px;display:inline-flex;align-items:center;gap:6px;text-decoration:none;padding:14px 0;">Learn more ↓</a>
+    </div>
+  </div>
+  <div class="gold-token-visual">
+    <div class="gold-ring" style="width:360px;height:360px;"></div>
+    <div class="gold-ring" style="width:280px;height:280px;"></div>
+    <div class="gold-ring" style="width:200px;height:200px;border-color:rgba(200,160,48,.35);"></div>
+    <div class="gold-coin">
+      <div class="gold-coin-text">XAUt</div>
+      <div class="gold-coin-sub">1 oz gold</div>
+    </div>
+  </div>
+</div>
+
+<!-- Trust strip -->
+<div style="background:#2a1a00;padding:20px 0;">
+  <div class="container">
+    <div style="display:flex;gap:40px;flex-wrap:wrap;align-items:center;">
+      <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:14px;"><span style="color:var(--xaut);">◆</span> 1 XAUt = 1 troy oz physical gold</div>
+      <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:14px;"><span style="color:var(--xaut);">◆</span> Stored in Swiss vaults</div>
+      <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:14px;"><span style="color:var(--xaut);">◆</span> Verifiable on-chain</div>
+      <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:14px;"><span style="color:var(--xaut);">◆</span> Backed by Tether</div>
+      <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:14px;"><span style="color:var(--xaut);">◆</span> Available on Ledn since June 2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── WHAT IS XAUt ─────────────────────────────────────────────── -->
+<section class="section section-white">
+  <div class="container">
+    <div class="xaut-what">
+      <div>
+        <p style="font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8a6200;margin-bottom:12px;">What is XAUt?</p>
+        <h2 style="font-size:42px;font-weight:500;line-height:1.15;margin-bottom:16px;">Gold, the way it was always meant to be held.</h2>
+        <p style="font-size:16px;color:var(--neutral);line-height:1.7;margin-bottom:16px;">XAUt (Tether Gold) is a digital token where each unit represents one fine troy ounce of physical gold on a specific gold bar held in a professional vault facility in Switzerland.</p>
+        <p style="font-size:16px;color:var(--neutral);line-height:1.7;">Unlike paper gold or ETFs, XAUt gives you direct ownership of allocated gold that can be verified on-chain at any time — combining the timeless security of physical gold with the flexibility of digital assets.</p>
+        <div class="disclaimer-box">
+          <strong style="color:var(--brand-black);">On Ledn, we call it "gold."</strong> You'll see it referred to as Gold (XAUt) throughout our platform. Not "digital gold" or "Tether Gold" — just gold.
+        </div>
+      </div>
+      <div>
+        <div class="xaut-stat-row">
+          <div class="xaut-stat">
+            <div class="val">1:1</div>
+            <div class="lbl">Gold backing per token</div>
+          </div>
+          <div class="xaut-stat">
+            <div class="val">🇨🇭</div>
+            <div class="lbl">Swiss vault storage</div>
+          </div>
+          <div class="xaut-stat">
+            <div class="val">∞</div>
+            <div class="lbl">Years gold has preserved wealth</div>
+          </div>
+          <div class="xaut-stat">
+            <div class="val">5</div>
+            <div class="lbl">Ledn assets — now incl. XAUt</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY BITCOIN + GOLD ──────────────────────────────────────── -->
+<section class="section" style="background:var(--bg-almond-accent);">
+  <div class="container">
+    <div class="section-header center">
+      <h2>Why Bitcoin + Gold?</h2>
+      <p>Two assets built for a single purpose: preserving purchasing power across generations.</p>
+    </div>
+    <div class="btc-gold-split">
+      <div class="split-panel btc-panel">
+        <div class="asset-header">
+          <div class="asset-icon btc asset-icon-lg">₿</div>
+          <h3>Bitcoin</h3>
+        </div>
+        <div class="split-trait"><span>📡</span><div><strong>Digital scarcity</strong> — 21 million coins, mathematically enforced</div></div>
+        <div class="split-trait"><span>🌐</span><div><strong>Non-sovereign</strong> — no government can inflate or confiscate</div></div>
+        <div class="split-trait"><span>⚡</span><div><strong>Programmable</strong> — collateralisable, transferable globally in minutes</div></div>
+        <div class="split-trait"><span>📈</span><div><strong>8-year track record</strong> on Ledn — borrow against it without selling</div></div>
+      </div>
+      <div class="split-panel gold-panel">
+        <div class="asset-header">
+          <div class="asset-icon xaut asset-icon-lg">XAUt</div>
+          <h3>Gold (XAUt)</h3>
+        </div>
+        <div class="split-trait"><span>⛏️</span><div><strong>Physical scarcity</strong> — millennia of history as a store of value</div></div>
+        <div class="split-trait"><span>🔒</span><div><strong>Non-sovereign</strong> — independent of any single nation's monetary policy</div></div>
+        <div class="split-trait"><span>✅</span><div><strong>Verifiable</strong> — on-chain proof linking to specific bars in Swiss vaults</div></div>
+        <div class="split-trait"><span>🆕</span><div><strong>Now tradeable on Ledn</strong> — across 3 XAUt pairs including BTC/XAUt</div></div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:16px;color:var(--neutral);margin-top:32px;font-style:italic;">"Pairing Bitcoin with Gold (XAUt) creates a foundation for generational wealth built on verifiable scarcity."</p>
+  </div>
+</section>
+
+<!-- ── WHAT YOU CAN DO ─────────────────────────────────────────── -->
+<section class="section section-mint">
+  <div class="container">
+    <div class="section-header">
+      <h2>What you can do with gold on Ledn</h2>
+      <p>Today and on the roadmap — your gold, your options.</p>
+    </div>
+    <div class="feature-steps">
+      <div class="feature-step">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          <div class="asset-icon xaut asset-icon-lg">XAUt</div>
+          <div>
+            <span class="new-badge">LIVE NOW</span>
+            <h3 style="margin-top:6px;">Hold gold digitally</h3>
+          </div>
+        </div>
+        <p>Store XAUt in your Ledn Transaction Account — primarily in cold storage, with the same security standards as your Bitcoin. Deposit and withdraw at any time.</p>
+      </div>
+      <div class="feature-step">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          <div style="display:flex;">
+            <div class="asset-icon xaut asset-icon-lg">XAUt</div>
+            <div class="asset-icon btc asset-icon-lg" style="margin-left:-16px;border:3px solid white;">₿</div>
+          </div>
+          <div>
+            <span class="new-badge">LIVE NOW</span>
+            <h3 style="margin-top:6px;">Trade across 3 XAUt pairs</h3>
+          </div>
+        </div>
+        <p>Instantly swap XAUt against BTC, USDT, USAT, or USDC — all on-platform with no fees. Rebalance between gold and your other assets in seconds.</p>
+      </div>
+      <div class="feature-step" style="border:2px dashed var(--xaut);opacity:.85;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          <div class="asset-icon xaut asset-icon-lg">XAUt</div>
+          <div>
+            <span style="background:#fffbeb;color:#8a6000;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;border:1px solid var(--xaut);letter-spacing:.06em;text-transform:uppercase;">Coming Soon</span>
+            <h3 style="margin-top:6px;">Borrow against your gold</h3>
+          </div>
+        </div>
+        <p>XAUt-backed loans are on the roadmap for later in 2026. Unlock liquidity from your gold holdings without selling — the same way Ledn works for Bitcoin today.</p>
+        <div style="background:#fffbeb;border-radius:8px;padding:12px;margin-top:16px;font-size:13px;color:#8a6000;">
+          🔔 Sign up and we'll notify you when XAUt-backed loans launch.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ROADMAP ─────────────────────────────────────────────────── -->
+<section class="section section-white">
+  <div class="container" style="max-width:800px;">
+    <div class="section-header">
+      <h2>Gold on Ledn — what's coming</h2>
+      <p>We're building a complete gold-integrated wealth management experience, step by step.</p>
+    </div>
+    <div class="roadmap-timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot live"></div>
+        <span class="timeline-badge tl-live">Live — June 2026</span>
+        <h4>Hold &amp; trade gold (XAUt)</h4>
+        <p>XAUt available in Transaction Accounts. Trade across BTC/XAUt, XAUt/USDT, XAUt/USAT, XAUt/USDC — 4 of 10 integrated pairs.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot soon"></div>
+        <span class="timeline-badge tl-soon">Coming — Later 2026</span>
+        <h4>XAUt-backed loans</h4>
+        <p>Borrow against your gold holdings using XAUt as loan collateral. Unlock liquidity without selling your gold position.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRUST + CTA ─────────────────────────────────────────────── -->
+<section class="section" style="background:linear-gradient(135deg,#2a1a00,#4a2e00);">
+  <div class="container" style="text-align:center;">
+    <div class="asset-icon xaut" style="width:72px;height:72px;font-size:20px;margin:0 auto 24px;">XAUt</div>
+    <h2 style="font-size:42px;font-weight:500;color:white;margin-bottom:16px;">Start holding gold on Ledn today.</h2>
+    <p style="font-size:18px;color:rgba(255,255,255,.65);margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto;">Backed by eight years of protecting client assets, and the same Open Book transparency that makes Ledn the most trusted name in bitcoin lending.</p>
+    <a href="#" class="btn-outline-white btn-lg">Open an account</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-white">
+  <div class="container" style="max-width:760px;">
+    <h2 style="font-size:40px;font-weight:500;margin-bottom:32px;">Gold (XAUt) questions answered</h2>
+    <ul class="faq-list">
+      <li class="faq-item">
+        <div class="faq-q">What is XAUt? <span>−</span></div>
+        <div class="faq-a">XAUt (gold) is a digital token issued by Tether where each unit represents one fine troy ounce of physical gold allocated to a specific gold bar in a professional vault facility in Switzerland.</div>
+      </li>
+      <li class="faq-item">
+        <div class="faq-q">Can I use gold (XAUt) as collateral for a loan? <span>+</span></div>
+      </li>
+      <li class="faq-item">
+        <div class="faq-q">What can I do with XAUt on Ledn today? <span>+</span></div>
+      </li>
+      <li class="faq-item">
+        <div class="faq-q">Is XAUt the same as "digital gold" or "Tether Gold"? <span>+</span></div>
+      </li>
+      <li class="faq-item">
+        <div class="faq-q">How do I get XAUt into my Ledn account? <span>+</span></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-logo"><div class="footer-logo-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--primary)"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/></svg></div><span class="footer-logo-text">Ledn</span></div><p class="footer-tagline">Bitcoin. Gold. The stablecoins the world runs on.</p></div>
+      <div><h4>Social</h4><ul><li><a href="#">Facebook</a></li><li><a href="#">Instagram</a></li><li><a href="#">LinkedIn</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#">FAQ</a></li><li><a href="#">Security</a></li><li><a href="#">Careers</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="#">Legal</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Disclaimers</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>SOC 2 Type 2 certified</span><span>© 2026, 21 Technologies Inc.</span></div>
+  </div>
+</footer>
+
+</body>
+</html>

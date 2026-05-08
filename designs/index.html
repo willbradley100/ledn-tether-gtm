@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ledn × Tether GTM — Design Mockups</title>
+<link rel="stylesheet" href="design-system.css">
+<style>
+body { background: #f5f5f5; font-family: var(--font); }
+.header {
+  background: var(--primary);
+  padding: 48px 60px;
+  color: white;
+}
+.header h1 { font-size: 40px; font-weight: 500; margin-bottom: 8px; }
+.header p  { font-size: 17px; color: rgba(255,255,255,.7); }
+.header .meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+.meta-item { background: rgba(255,255,255,.1); border-radius: 6px; padding: 8px 16px; font-size: 13px; }
+.meta-item strong { color: white; }
+.meta-item span { color: rgba(255,255,255,.65); }
+
+.pages-grid {
+  max-width: 1200px;
+  margin: 48px auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.page-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow .2s;
+}
+.page-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,.1); }
+.page-card-thumb {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 500;
+  color: white;
+}
+.page-card-body { padding: 24px; }
+.page-card-body h3 { font-size: 18px; font-weight: 600; margin-bottom: 6px; }
+.page-card-body p  { font-size: 14px; color: #666; line-height: 1.55; margin-bottom: 16px; }
+.page-card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.tag-new     { background: #e8f9e8; color: #1c571a; }
+.tag-updated { background: #fff8e1; color: #8a6000; }
+.tag-high    { background: #fef2f2; color: #991b1b; }
+.tag-med     { background: #eff6ff; color: #1e40af; }
+
+.legend {
+  max-width: 1200px;
+  margin: 0 auto 48px;
+  padding: 0 40px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.legend-item { display: flex; align-items: center; gap: 8px; font-size: 14px; color: #555; }
+.legend-dot { width: 12px; height: 12px; border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Ledn × Tether GTM — Design Mockups</h1>
+  <p>Marketing site updates for XAUt, USDT &amp; USAT launch</p>
+  <div class="meta">
+    <div class="meta-item"><strong>Go-live:</strong> <span>Jun 1, 2026</span></div>
+    <div class="meta-item"><strong>Site deadline:</strong> <span>May 25, 2026</span></div>
+    <div class="meta-item"><strong>Owner:</strong> <span>Precision Growth + Simon</span></div>
+    <div class="meta-item"><strong>Approved by:</strong> <span>Ed Ramsden</span></div>
+  </div>
+</div>
+
+<div class="pages-grid" style="margin-top:48px;">
+
+  <a class="page-card" href="homepage.html">
+    <div class="page-card-thumb" style="background:var(--primary);">🏠</div>
+    <div class="page-card-body">
+      <h3>Homepage</h3>
+      <p>New platform vision section, expanded asset strip, updated loan calculator disbursement options.</p>
+      <div class="page-card-tags">
+        <span class="tag tag-high">High Priority</span>
+        <span class="tag tag-updated">Updated</span>
+        <span class="tag tag-new">New Section</span>
+      </div>
+    </div>
+  </a>
+
+  <a class="page-card" href="trade.html">
+    <div class="page-card-thumb" style="background:#01242d;">⇄</div>
+    <div class="page-card-body">
+      <h3>Trade Page</h3>
+      <p>Complete overhaul — 1 pair → 10 pairs, new asset set hero, trading pairs matrix, updated copy throughout.</p>
+      <div class="page-card-tags">
+        <span class="tag tag-high">High Priority</span>
+        <span class="tag tag-new">New Content</span>
+      </div>
+    </div>
+  </a>
+
+  <a class="page-card" href="borrowing.html">
+    <div class="page-card-thumb" style="background:#03657c;">₿</div>
+    <div class="page-card-body">
+      <h3>Borrowing Page</h3>
+      <p>Disbursement options expanded to include USDT &amp; USAT, new stablecoin rails RTB, gold lending roadmap teaser.</p>
+      <div class="page-card-tags">
+        <span class="tag tag-med">Medium Priority</span>
+        <span class="tag tag-updated">Updated</span>
+        <span class="tag tag-new">New Section</span>
+      </div>
+    </div>
+  </a>
+
+  <a class="page-card" href="savings.html">
+    <div class="page-card-thumb" style="background:var(--primary);">⊕</div>
+    <div class="page-card-body">
+      <h3>Transaction &amp; Growth Accounts</h3>
+      <p>XAUt and USAT added to Transaction Account, updated supported-assets section, new XAUt holding card.</p>
+      <div class="page-card-tags">
+        <span class="tag tag-med">Medium Priority</span>
+        <span class="tag tag-updated">Updated</span>
+        <span class="tag tag-new">New Asset</span>
+      </div>
+    </div>
+  </a>
+
+  <a class="page-card" href="gold.html">
+    <div class="page-card-thumb" style="background:#8a6200;">◈</div>
+    <div class="page-card-body">
+      <h3>XAUt / Gold Page <span class="tag tag-new" style="font-size:10px;">NEW PAGE</span></h3>
+      <p>New dedicated page for gold (XAUt) — what it is, why Ledn, hold &amp; trade features, lending roadmap.</p>
+      <div class="page-card-tags">
+        <span class="tag tag-new">New Page</span>
+        <span class="tag tag-high">SEO Value</span>
+      </div>
+    </div>
+  </a>
+
+  <a class="page-card" href="private-wealth.html">
+    <div class="page-card-thumb" style="background:#232323;">◇</div>
+    <div class="page-card-body">
+      <h3>Private Wealth</h3>
+      <p>Loan calculator updated with USDT/USAT disbursement, BTC + gold generational wealth narrative, updated FAQ.</p>
+      <div class="page-card-tags">
+        <span class="tag tag-med">Medium Priority</span>
+        <span class="tag tag-updated">Updated</span>
+      </div>
+    </div>
+  </a>
+
+  <!-- ── SEO TRADING PAIR PAGES ─── -->
+  <div style="grid-column:1/-1;padding-top:24px;border-top:2px solid #e5e5e5;margin-top:8px;">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;">
+      <h2 style="font-size:22px;font-weight:600;color:var(--primary);">SEO Trading Pair Pages</h2>
+      <span class="tag tag-new">10 pages · New</span>
+      <span style="font-size:13px;color:#666;margin-left:8px;">Template: BTC/USDT — apply pattern to all pairs</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;">
+
+      <a class="page-card" href="trade-btc-usdt.html" style="border-left:4px solid var(--btc);">
+        <div class="page-card-thumb" style="background:#f7931a;height:80px;font-size:22px;">₿/₮</div>
+        <div class="page-card-body" style="padding:16px;">
+          <h3 style="font-size:15px;">BTC / USDT</h3>
+          <p style="font-size:12px;margin-bottom:10px;">92K global · KD 58 · Template page</p>
+          <div class="page-card-tags"><span class="tag tag-high">Highest Vol</span><span class="tag tag-new">Template</span></div>
+        </div>
+      </a>
+
+      <a class="page-card" href="trade-btc-usdc.html" style="border-left:4px solid var(--btc);">
+        <div class="page-card-thumb" style="background:#c96a00;height:80px;font-size:22px;">₿/$</div>
+        <div class="page-card-body" style="padding:16px;">
+          <h3 style="font-size:15px;">BTC / USDC</h3>
+          <p style="font-size:12px;margin-bottom:10px;">300 US · KD 40 · est ~15K global</p>
+          <div class="page-card-tags"><span class="tag tag-high">High Vol</span></div>
+        </div>
+      </a>
+
+      <a class="page-card" href="trade-btc-xaut.html" style="border-left:4px solid var(--xaut);">
+        <div class="page-card-thumb" style="background:#c8a951;height:80px;font-size:22px;">₿/Au</div>
+        <div class="page-card-body" style="padding:16px;">
+          <h3 style="font-size:15px;">BTC / Gold</h3>
+          <p style="font-size:12px;margin-bottom:10px;">First-mover · Near-zero competition</p>
+          <div class="page-card-tags"><span class="tag tag-new">Brand Unique</span></div>
+        </div>
+      </a>
+
+      <a class="page-card" href="trade-btc-usat.html" style="border-left:4px solid var(--usat);">
+        <div class="page-card-thumb" style="background:#1e6fc8;height:80px;font-size:22px;">₿/$</div>
+        <div class="page-card-body" style="padding:16px;">
+          <h3 style="font-size:15px;">BTC / USAT</h3>
+          <p style="font-size:12px;margin-bottom:10px;">New asset · US-focused · Early mover</p>
+          <div class="page-card-tags"><span class="tag tag-new">New</span></div>
+        </div>
+      </a>
+
+      <a class="page-card" href="trade-xaut-usdt.html" style="border-left:4px solid var(--xaut);">
+        <div class="page-card-thumb" style="background:#a08a35;height:80px;font-size:22px;">Au/₮</div>
+        <div class="page-card-body" style="padding:16px;">
+          <h3 style="font-size:15px;">Gold / USDT</h3>
+          <p style="font-size:12px;margin-bottom:10px;">xaut usdt 70 US · First-mover</p>
+          <div class="page-card-tags"><span class="tag tag-new">New</span></div>
+        </div>
+      </a>
+
+      <a class="page-card" href="trade-xaut-usdc.html" style="border-left:4px solid var(--xaut);">
+        <div class="page-card-thumb" style="background:#b89a40;height:80px;font-size:22px;">Au/$</div>
+        <div class="page-card-body" style="padding:16px;">
+          <h3 style="font-size:15px;">Gold / USDC</h3>
+          <p style="font-size:12px;margin-bottom:10px;">Brand authority · Circle regulated</p>
+          <div class="page-card-tags"><span class="tag tag-new">New</span></div>
+        </div>
+      </a>
+
+      <a class="page-card" href="trade-xaut-usat.html" style="border-left:4px solid var(--xaut);">
+        <div class="page-card-thumb" style="background:#9a8030;height:80px;font-size:22px;">Au/$</div>
+        <div class="page-card-body" style="padding:16px;">
+          <h3 style="font-size:15px;">Gold / USAT</h3>
+          <p style="font-size:12px;margin-bottom:10px;">Brand authority · US-regulated pair</p>
+          <div class="page-card-tags"><span class="tag tag-new">New</span></div>
+        </div>
+      </a>
+
+      <a class="page-card" href="trade-usdt-usat.html" style="border-left:4px solid var(--usdt);">
+        <div class="page-card-thumb" style="background:#53ae94;height:80px;font-size:22px;">₮/$</div>
+        <div class="page-card-body" style="padding:16px;">
+          <h3 style="font-size:15px;">USDT / USAT</h3>
+          <p style="font-size:12px;margin-bottom:10px;">Both Tether stablecoins · Migration</p>
+          <div class="page-card-tags"><span class="tag tag-new">New</span></div>
+        </div>
+      </a>
+
+      <a class="page-card" href="trade-usdt-usdc.html" style="border-left:4px solid var(--usdt);">
+        <div class="page-card-thumb" style="background:#3a8070;height:80px;font-size:22px;">₮/$</div>
+        <div class="page-card-body" style="padding:16px;">
+          <h3 style="font-size:15px;">USDT / USDC</h3>
+          <p style="font-size:12px;margin-bottom:10px;">550 US combined · KD 42-45</p>
+          <div class="page-card-tags"><span class="tag tag-med">Med Vol</span></div>
+        </div>
+      </a>
+
+      <a class="page-card" href="trade-usat-usdc.html" style="border-left:4px solid var(--usat);">
+        <div class="page-card-thumb" style="background:#1557a0;height:80px;font-size:22px;">$/$</div>
+        <div class="page-card-body" style="padding:16px;">
+          <h3 style="font-size:15px;">USAT / USDC</h3>
+          <p style="font-size:12px;margin-bottom:10px;">Both US-regulated · Early mover</p>
+          <div class="page-card-tags"><span class="tag tag-new">New</span></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#e8f9e8;border:1px solid #1c571a;"></div> New content / new page</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#fff8e1;border:1px solid #c8a000;"></div> Updated / changed content</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#f5f5f5;border:1px solid #ccc;"></div> Unchanged from current site</div>
+  <div style="margin-left:auto;font-size:13px;color:#999;">Dashed amber outlines on designs = changed sections</div>
+</div>
+
+</body>
+</html>

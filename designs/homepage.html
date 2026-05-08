@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homepage — Ledn Design Mockup</title>
+<link rel="stylesheet" href="design-system.css">
+<style>
+/* Announcement bar */
+.announce-bar {
+  background: var(--xaut);
+  color: white;
+  text-align: center;
+  padding: 10px 40px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.announce-bar a { color: white; font-weight: 700; text-decoration: underline; }
+
+/* Asset platform section */
+.platform-section {
+  padding: 80px 0;
+  background: var(--primary-dark);
+  color: white;
+}
+.platform-pillars {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2px;
+  background: rgba(255,255,255,.1);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 48px;
+}
+.platform-pillar {
+  background: rgba(255,255,255,.05);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.platform-pillar:hover { background: rgba(255,255,255,.08); }
+.pillar-verb {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.5);
+}
+.pillar-title { font-size: 26px; font-weight: 500; color: white; }
+.pillar-desc  { font-size: 14px; color: rgba(255,255,255,.65); line-height: 1.6; }
+.pillar-assets { display: flex; gap: 8px; flex-wrap: wrap; }
+.pillar-asset {
+  display: flex; align-items: center; gap: 6px;
+  background: rgba(255,255,255,.1);
+  border-radius: 20px;
+  padding: 4px 10px 4px 6px;
+  font-size: 13px;
+  color: rgba(255,255,255,.85);
+}
+.pillar-asset .asset-icon { width: 22px; height: 22px; font-size: 10px; }
+.pillar-asset .asset-icon.xaut { font-size: 8px; }
+
+/* Updated calculator section note */
+.calc-funded-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.calc-option {
+  padding: 8px 16px;
+  border: 1.5px solid var(--neutral-lighter);
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  background: white;
+}
+.calc-option.active {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: white;
+}
+.calc-option.new-option {
+  border-color: var(--xaut);
+  color: #8a6200;
+  background: #fffbeb;
+}
+
+/* Trust strip bullets */
+.trust-bullets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 32px;
+}
+.trust-bullet {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,.8);
+  font-size: 14px;
+}
+.trust-bullet::before {
+  content: '';
+  display: block;
+  width: 6px; height: 6px;
+  background: var(--xaut);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Stats */
+.stats-bar {
+  background: var(--primary);
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+.stat-block {
+  padding: 32px 28px;
+  border-right: 1px solid rgba(255,255,255,.1);
+  text-align: center;
+}
+.stat-block:last-child { border-right: none; }
+.stat-block .val { font-size: 36px; font-weight: 500; color: white; }
+.stat-block .lbl { font-size: 13px; color: rgba(255,255,255,.6); margin-top: 4px; }
+</style>
+</head>
+<body>
+
+<!-- Design nav -->
+<div class="design-nav">
+  <span class="design-nav-label">Pages</span>
+  <a href="index.html">Index</a>
+  <a class="active" href="homepage.html">Homepage</a>
+  <a href="trade.html">Trade</a>
+  <a href="borrowing.html">Borrowing</a>
+  <a href="savings.html">Savings</a>
+  <a href="gold.html">Gold (new)</a>
+  <a href="private-wealth.html">Private Wealth</a>
+</div>
+
+<!-- ── ANNOUNCEMENT BAR (NEW) ──────────────────────────────────── -->
+<div style="border:3px dashed rgba(245,158,11,.6);">
+  <div style="background:#fffbeb;padding:6px 16px;font-size:12px;color:#78350f;"><strong>NEW:</strong> Launch announcement bar</div>
+  <div class="announce-bar">
+    🪙 New: Hold, trade & borrow with Bitcoin, Gold (XAUt), USDT, USAT &amp; USDC —
+    <a href="gold.html">Learn more →</a>
+  </div>
+</div>
+
+<!-- Topbar -->
+<div class="topbar">
+  <div class="topbar-tabs">
+    <a href="#" class="active">Ledn</a>
+    <a href="#">Ledn Private Wealth</a>
+  </div>
+  <span>English ▾</span>
+</div>
+
+<!-- Nav -->
+<nav class="nav">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/></svg>
+    </div>
+    <span class="nav-logo-text">Ledn</span>
+  </a>
+  <div class="nav-links">
+    <a href="#">Products &amp; services ▾</a>
+    <a href="#">About us ▾</a>
+    <a href="#">Learn more ▾</a>
+    <a href="#">Loan calculator</a>
+    <a href="#">Blog</a>
+  </div>
+  <div class="nav-ctas">
+    <a href="#" class="btn-primary">Sign up</a>
+    <a href="#" class="btn-outline">Log in</a>
+  </div>
+</nav>
+
+<!-- ── HERO (LARGELY UNCHANGED) ───────────────────────────────── -->
+<div style="position:relative;">
+  <div style="position:absolute;top:12px;right:12px;z-index:10;background:#fffbeb;padding:4px 10px;border-radius:4px;font-size:12px;color:#92400e;border:1px dashed #f59e0b;">
+    Unchanged — existing hero retained
+  </div>
+  <div class="hero">
+    <div class="hero-content">
+      <p style="font-size:13px;color:rgba(255,255,255,.55);font-weight:600;letter-spacing:.05em;text-transform:uppercase;">Bitcoin-backed loans</p>
+      <h1>Don't sell your bitcoin.<br>Get a bitcoin-backed loan.</h1>
+      <p class="hero-sub">Borrow from 9.99% to 11.49% APR. No credit checks, no complexity, only transparency.</p>
+      <div style="margin-top:8px;"><a href="#" class="btn-outline-white btn-lg">Borrow today</a></div>
+    </div>
+    <div class="hero-image" style="background:linear-gradient(135deg,#023d4b 0%,#01242d 100%);display:flex;align-items:center;justify-content:center;">
+      <div style="background:rgba(255,255,255,.05);border-radius:16px;padding:32px;width:80%;max-width:340px;">
+        <div style="color:rgba(255,255,255,.5);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">Platform preview</div>
+        <img src="https://cdn.prod.website-files.com/67dd7d513168f4f6b7195946/686293cb21cca79403860e84_ledn%20desktop%20en.webp" style="width:100%;border-radius:8px;" alt="Ledn platform">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Trust strip -->
+<div class="trust-strip">
+  <div class="container">
+    <div class="trust-bullets">
+      <div class="trust-bullet">Over $10B in loans originated</div>
+      <div class="trust-bullet">Collateral held with qualified independent custodian</div>
+      <div class="trust-bullet">Backed by Tether</div>
+      <div class="trust-bullet">Operating since 2018 through multiple market cycles</div>
+      <div class="trust-bullet">Monthly Open Book Report</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── NEW PLATFORM SECTION ──────────────────────────────────── -->
+<div style="border:3px dashed rgba(245,158,11,.5);">
+  <div style="background:#fffbeb;padding:8px 16px;font-size:13px;color:#78350f;">
+    <strong>NEW SECTION:</strong> Platform vision — "Bitcoin. Gold. The stablecoins the world runs on." Placed after hero trust strip.
+  </div>
+  <div class="platform-section">
+    <div class="container">
+      <div style="max-width:640px;">
+        <p style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--xaut);margin-bottom:12px;">Now available</p>
+        <h2 style="font-size:48px;font-weight:500;color:white;line-height:1.1;">Bitcoin. Gold.<br>The stablecoins the<br>world runs on.</h2>
+        <p style="font-size:18px;color:rgba(255,255,255,.65);margin-top:16px;line-height:1.6;">Ledn is the single platform to hold, trade, and borrow against your most valuable assets — backed by eight years of protecting client wealth.</p>
+      </div>
+      <div class="platform-pillars">
+        <!-- Hold -->
+        <div class="platform-pillar">
+          <div class="pillar-verb">Hold</div>
+          <div class="pillar-title">Your hardest assets</div>
+          <div class="pillar-desc">Store Bitcoin and Gold (XAUt) — each token backed by one troy ounce of physical gold in Swiss vaults — alongside the world's leading stablecoins.</div>
+          <div class="pillar-assets">
+            <div class="pillar-asset"><div class="asset-icon btc">₿</div> BTC</div>
+            <div class="pillar-asset"><div class="asset-icon xaut">XAUt</div> Gold</div>
+            <div class="pillar-asset"><div class="asset-icon usdt">₮</div> USDT</div>
+            <div class="pillar-asset"><div class="asset-icon usat">$</div> USAT</div>
+            <div class="pillar-asset"><div class="asset-icon usdc">©</div> USDC</div>
+          </div>
+        </div>
+        <!-- Trade -->
+        <div class="platform-pillar">
+          <div class="pillar-verb">Trade</div>
+          <div class="pillar-title">10 integrated pairs</div>
+          <div class="pillar-desc">Instantly swap between any combination of your five supported assets with no trading fees and zero slippage on quoted prices.</div>
+          <div style="margin-top:8px;">
+            <a href="trade.html" style="color:rgba(255,255,255,.7);font-size:14px;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:2px;">Explore trading pairs →</a>
+          </div>
+        </div>
+        <!-- Borrow -->
+        <div class="platform-pillar">
+          <div class="pillar-verb">Borrow</div>
+          <div class="pillar-title">More stablecoin rails</div>
+          <div class="pillar-desc">Receive and repay loans in USDT, USAT, or USDC — no third-party swaps needed. Bitcoin remains the accepted collateral.</div>
+          <div style="background:rgba(255,255,255,.08);border-radius:8px;padding:12px 14px;margin-top:8px;">
+            <div style="font-size:12px;color:rgba(255,255,255,.45);font-weight:600;margin-bottom:6px;">Disburse &amp; repay in</div>
+            <div style="display:flex;gap:6px;">
+              <div class="pillar-asset"><div class="asset-icon usdt">₮</div> USDT</div>
+              <div class="pillar-asset"><div class="asset-icon usat">$</div> USAT</div>
+              <div class="pillar-asset"><div class="asset-icon usdc">©</div> USDC</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="stats-bar">
+  <div class="stat-block"><div class="val">$10B+</div><div class="lbl">Loans originated since 2018</div></div>
+  <div class="stat-block"><div class="val">100+</div><div class="lbl">Countries supported</div></div>
+  <div class="stat-block"><div class="val">10</div><div class="lbl">Integrated trading pairs</div></div>
+  <div class="stat-block"><div class="val">8 yrs</div><div class="lbl">Perfect track record</div></div>
+</div>
+
+<!-- ── BITCOIN LOANS SECTION (UNCHANGED) ─────────────────────── -->
+<section class="section section-white">
+  <div class="container">
+    <div style="position:relative;">
+      <div style="position:absolute;top:0;right:0;background:#f5f5f5;padding:4px 10px;border-radius:4px;font-size:12px;color:#888;border:1px solid #e0e0e0;">
+        Unchanged — existing loan content
+      </div>
+    </div>
+    <div style="margin-bottom:48px;">
+      <span style="display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;">
+        <div class="asset-icon btc" style="width:32px;height:32px;font-size:15px;">₿</div>
+        <span style="font-size:14px;color:var(--neutral);font-weight:500;">Bitcoin-Backed Loans</span>
+      </span>
+      <h2 style="font-size:40px;font-weight:500;">Bitcoin-Backed Loans, Done Right.</h2>
+      <p style="font-size:17px;color:var(--neutral);margin-top:12px;max-width:560px;">Ledn provides a secure and transparent way to access liquidity while maintaining your bitcoin holdings.</p>
+    </div>
+    <div class="card-grid" style="grid-template-columns:repeat(4,1fr);gap:16px;">
+      <div style="text-align:center;padding:24px 16px;border:1px solid var(--neutral-lighter);border-radius:10px;">
+        <div style="font-size:13px;color:var(--neutral);margin-bottom:8px;">Industry leader</div>
+        <div style="font-size:18px;font-weight:500;">Investment grade bond rating</div>
+      </div>
+      <div style="text-align:center;padding:24px 16px;border:1px solid var(--neutral-lighter);border-radius:10px;">
+        <div style="font-size:13px;color:var(--neutral);margin-bottom:8px;">Custodied Loans</div>
+        <div style="font-size:18px;font-weight:500;">Loans held securely in custody</div>
+      </div>
+      <div style="text-align:center;padding:24px 16px;border:1px solid var(--neutral-lighter);border-radius:10px;">
+        <div style="font-size:13px;color:var(--neutral);margin-bottom:8px;">Loans available in</div>
+        <div style="font-size:18px;font-weight:500;">100+ Countries</div>
+      </div>
+      <div style="text-align:center;padding:24px 16px;border:1px solid var(--neutral-lighter);border-radius:10px;">
+        <div style="font-size:13px;color:var(--neutral);margin-bottom:8px;">Every 6 months</div>
+        <div style="font-size:18px;font-weight:500;">Proof of Reserves</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LOAN CALCULATOR (UPDATED) ─────────────────────────────── -->
+<div style="border:3px dashed rgba(245,158,11,.5);">
+  <div style="background:#fffbeb;padding:8px 16px;font-size:13px;color:#78350f;">
+    <strong>UPDATED:</strong> "Funded in" selector — USDT and USAT added alongside CAD / USD / USDC
+  </div>
+  <section class="section section-mint">
+    <div class="container">
+      <h2 style="font-size:40px;font-weight:500;margin-bottom:32px;">Bitcoin loan calculator</h2>
+      <div style="background:white;border-radius:16px;padding:40px;max-width:700px;box-shadow:0 2px 16px rgba(0,0,0,.06);">
+        <div style="margin-bottom:24px;">
+          <label style="font-size:14px;font-weight:600;color:var(--neutral);display:block;margin-bottom:8px;letter-spacing:.06em;text-transform:uppercase;">Loan amount</label>
+          <div style="background:var(--bg-neutral);border-radius:8px;padding:16px 20px;font-size:28px;font-weight:500;">$500,000 USD</div>
+        </div>
+        <div style="margin-bottom:24px;">
+          <label style="font-size:14px;font-weight:600;color:var(--neutral);display:block;margin-bottom:8px;letter-spacing:.06em;text-transform:uppercase;">Rate (APR)</label>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+            <div style="border:1px solid var(--neutral-lighter);border-radius:8px;padding:14px 10px;text-align:center;font-size:15px;font-weight:500;">11.49%<br><span style="font-size:11px;color:var(--neutral)">&lt;$250k</span></div>
+            <div style="border:1px solid var(--neutral-lighter);border-radius:8px;padding:14px 10px;text-align:center;font-size:15px;font-weight:500;">10.99%<br><span style="font-size:11px;color:var(--neutral)">$250k+</span></div>
+            <div style="border:2px solid var(--primary);border-radius:8px;padding:14px 10px;text-align:center;font-size:15px;font-weight:600;background:#f0f9ff;">10.49%<br><span style="font-size:11px;color:var(--primary)">$500k+</span></div>
+            <div style="border:1px solid var(--neutral-lighter);border-radius:8px;padding:14px 10px;text-align:center;font-size:15px;font-weight:500;">9.99%<br><span style="font-size:11px;color:var(--neutral)">$1M+</span></div>
+          </div>
+        </div>
+        <div style="margin-bottom:28px;">
+          <label style="font-size:14px;font-weight:600;color:var(--neutral);display:block;margin-bottom:10px;letter-spacing:.06em;text-transform:uppercase;">Funded in <span class="updated-badge">UPDATED</span></label>
+          <div class="calc-funded-row">
+            <div class="calc-option">CAD</div>
+            <div class="calc-option active">USD</div>
+            <div class="calc-option">USDC</div>
+            <div class="calc-option new-option">✦ USDT</div>
+            <div class="calc-option new-option">✦ USAT</div>
+          </div>
+          <p style="font-size:12px;color:var(--neutral);margin-top:10px;">✦ New — disburse and repay your loan in USDT or USAT</p>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px;">
+          <div style="background:var(--bg-neutral);border-radius:8px;padding:16px;">
+            <div style="font-size:12px;color:var(--neutral);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;">Collateral required</div>
+            <div style="font-size:22px;font-weight:500;">6.1489 BTC</div>
+          </div>
+          <div style="background:var(--bg-neutral);border-radius:8px;padding:16px;">
+            <div style="font-size:12px;color:var(--neutral);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;">Finance charge</div>
+            <div style="font-size:22px;font-weight:500;">10.49% APR</div>
+          </div>
+        </div>
+        <a href="#" class="btn-primary btn-lg" style="width:100%;text-align:center;display:block;">Apply now</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- CTA -->
+<section class="section section-primary">
+  <div class="container" style="text-align:center;">
+    <h2 style="font-size:40px;font-weight:500;color:white;margin-bottom:16px;">Ready to Unlock Your Bitcoin's Potential?</h2>
+    <a href="#" class="btn-outline-white btn-lg">Apply now</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="footer-logo-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--primary)"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/></svg></div>
+          <span class="footer-logo-text">Ledn</span>
+        </div>
+        <p class="footer-tagline">Bitcoin. Gold. The stablecoins the world runs on. Built on eight years of trust.</p>
+      </div>
+      <div><h4>Social</h4><ul><li><a href="#">Facebook</a></li><li><a href="#">Instagram</a></li><li><a href="#">LinkedIn</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#">FAQ</a></li><li><a href="#">Security</a></li><li><a href="#">Careers</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="#">Legal</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Disclaimers</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>SOC 2 Type 2 certified</span><span>© 2026, 21 Technologies Inc.</span></div>
+  </div>
+</footer>
+
+</body>
+</html>
