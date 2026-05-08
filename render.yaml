@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: ledn-tether-gtm
+    runtime: static
+    staticPublishPath: ./designs
+    buildCommand: ""
+    pullRequestPreviewsEnabled: true
